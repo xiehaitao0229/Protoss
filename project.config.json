@@ -21,8 +21,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "11",
+					"pathName": "pages/product/product",
+					"query": "id=11"
+				}
+			]
 		}
 	}
 }

@@ -6,6 +6,9 @@ class Base {
     this.baseRequestUrl = Config.requestUrl;
   }
 
+  /**
+   * 对请求数据做了封装
+   */
   request(params) {
     var url = this.baseRequestUrl + params.url;
 
@@ -33,6 +36,16 @@ class Base {
       }
     })
   }
+
+/**
+ * 对获取页面传递的参数做了封装
+ * 获取元素上的绑定的值
+ */
+getDataSet(event,key){
+  return event.currentTarget.dataset[key];
+}
+
+
 }
 
 export {Base};

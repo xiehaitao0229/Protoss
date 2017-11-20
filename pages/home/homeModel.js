@@ -32,6 +32,19 @@ class Home  extends Base{
         this.request(params);
       }
 
+      /*最近商品*/
+      getProductsData(callback) {
+        var params = {
+          url: 'product/recent',
+          type: "GET",
+          sCallback: function (res) {
+            callback && callback(res);
+          }
+        }
+        //  调用基类封装好的reques()函数
+        this.request(params);
+      }
+
 }
 
 //  最后记得export出去

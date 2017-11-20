@@ -31,8 +31,36 @@ Page({
          'themeArr':res
       })
     })
-  }
 
+    home.getProductsData((res) => {
+      this.setData({
+        'productsArr': res
+      })
+    })
+
+  },
+
+  /**
+   * 跳转到具体商品页
+   */
+  onProductsItemTap:function(event){
+      var id = home.getDataSet(event,'id');
+     // console.log(id);
+      wx.navigateTo({
+        url: '../product/product?id='+id,
+      })
+  },
+
+/**
+ * 跳转到主题页
+ */
+onThemeItemTap:function(event){
+  var id = home.getDataSet(event,'id');
+  var name = home.getDataSet(event, 'name');
+  wx.navigateTo({
+    url: '../theme/theme?id=' + id+'&name='+name,
+  })
+},
 
 
 })
